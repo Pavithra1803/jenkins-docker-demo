@@ -1,0 +1,31 @@
+# Maven build files
+target/
+*.log
+
+# Compiled class files
+*.class
+
+# Package files
+*.jar
+*.war
+*.ear
+
+# Maven
+.mvn/
+mvnw
+mvnw.cmd
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Jenkins temporary files
+.jenkins/
+
+# Environment variables
+.env
