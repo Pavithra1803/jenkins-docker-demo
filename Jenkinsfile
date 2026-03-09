@@ -14,7 +14,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/Pavithra1803/jenkins-docker-demo.git'
+                git 'https://github.com/Pavithra183/jenkins-docker-demo.git'
             }
         }
 
