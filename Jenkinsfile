@@ -1,7 +1,13 @@
 pipeline {
-    agent any
+//     this tells jenkins where to run the pipeline-like gitlab runner
+    agent {
+            docker {
+                image 'maven:3.9.9-eclipse-temurin-17'
+            }
+        }
 
     environment {
+    //jenkins provide some vars like BUILD_NUMBER,JOB_NAME..
         BUILD_TAG = "build-${BUILD_NUMBER}"
     }
 
@@ -46,7 +52,7 @@ pipeline {
 
     post {
         failure {
-            mail to: 'pavithranamala0906@gmail.com',
+            mail to: 'i48615886@gmail.com',
             subject: "Build Failed: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
             body: "Build ${env.BUILD_NUMBER} failed."
         }
