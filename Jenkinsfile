@@ -1,8 +1,8 @@
 pipeline {
 //     this tells jenkins where to run the pipeline-like gitlab runner
     agent any
-        tools {
-            maven 'Maven3'
+        docker {
+            image 'maven:3.9.9-eclipse-temurin-17'
         }
 
     environment {
@@ -14,7 +14,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/Pavithra183/jenkins-docker-demo.git'
+                git 'https://github.com/Pavithra1803/jenkins-docker-demo.git'
             }
         }
 
