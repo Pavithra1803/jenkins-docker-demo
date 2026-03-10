@@ -1,10 +1,12 @@
 pipeline {
 //     this tells jenkins where to run the pipeline-like gitlab runner
-    agent any
+    agent {
         docker {
-            image 'maven:3.9.9-eclipse-temurin-17'
-        }
 
+            image 'maven:3.9.9-eclipse-temurin-17'
+            label "docker-agent"
+        }
+    }
     environment {
     //jenkins provide some vars like BUILD_NUMBER,JOB_NAME
         BUILD_TAG = "build-${BUILD_NUMBER}"
