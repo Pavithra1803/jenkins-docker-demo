@@ -6,7 +6,7 @@ pipeline {
         }
 
     environment {
-    //jenkins provide some vars like BUILD_NUMBER,JOB_NAME
+    //jenkins provide some vars  like BUILD_NUMBER,JOB_NAME
         BUILD_TAG = "build-${BUILD_NUMBER}"
     }
 
