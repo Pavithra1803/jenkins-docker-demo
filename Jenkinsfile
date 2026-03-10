@@ -2,9 +2,7 @@ pipeline {
 //     this tells jenkins where to run the pipeline-like gitlab runner
     agent {
         docker {
-
             image 'maven:3.9.9-eclipse-temurin-17'
-            label "docker-agent"
         }
     }
     environment {
